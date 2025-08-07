@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>味香首頁</title>
+<link rel="stylesheet" href="style_classical.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <header class="main-header">
+  <div class="header-container">
+    <img src="images/logo.jpg" alt="味香魚丸 Logo" class="logo">
+
+    <!-- 漢堡選單按鈕 -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <!-- 側邊滑出選單 -->
+  <div class="side-menu" id="sideMenu">
+    <button class="close-btn" onclick="toggleMenu()">✕</button>
+    <nav class="side-nav">
+      <a href="#">首頁</a>
+      <a href="#">關於我們</a>
+      <a href="#">產品介紹</a>
+      <a href="#">聯絡我們</a>
+    </nav>
+  </div>
+
+  <!-- 背景遮罩 -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+</header>
+
+
+  <!-- Swiper -->
+  <div class="swiper fullscreen-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/logo.jpg" alt="圖片1"></div>
+      <div class="swiper-slide"><img src="images/logo.jpg" alt="圖片2"></div>
+      <div class="swiper-slide"><img src="images/logo.jpg" alt="圖片3"></div>
+      <div class="swiper-slide"><img src="images/logo.jpg" alt="圖片4"></div>
+      <div class="swiper-slide"><img src="images/logo.jpg" alt="圖片5"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <section>
+    <h2>歡迎來到味香</h2>
+    <p>我們致力於提供最道地的美味，選用高品質食材，結合傳統與創新，為您帶來難忘的餐飲體驗。</p>
+  </section>
+
+  <section class="video-section">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/你的影片ID" 
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+  
+  
+  <section class="product-section">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/product1.jpg" alt="魚丸" />
+        <h3>花枝羹</h3>
+        <p>新鮮魚漿，口感花枝</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product2.jpg" alt="蝦丸" />
+        <h3>福州丸</h3>
+        <p>Q談報知，福德你心</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product3.jpg" alt="花枝丸" />
+        <h3>甜不辣（小片）</h3>
+        <p>高魚漿比例</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product4.jpg" alt="花枝丸" />
+        <h3>甜不辣（條）</h3>
+        <p>高魚漿比例</p>
+     </div>
+
+      <div class="product-card">
+        <img src="images/product5.jpg" alt="花枝丸" />
+        <h3>甜不辣（中片）</h3>
+        <p>高魚漿比例</p>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product6.JPEG" alt="花枝丸" />
+        <h3>赤肉羹</h3>
+        <p>口感扎實，傳統好滋味</p>
+    </div>
+
+    <div class="product-card">
+      <img src="images/product7.JPEG" alt="花枝丸" />
+      <h3>魷魚羹</h3>
+      <p>彈牙魚漿，特選乾魷魚</p>
+    </div>
+
+
+      <div class="product-card">
+        <img src="images/product8.JPEG" alt="花枝丸" />
+        <h3>小魚丸</h3>
+        <p>古早工法，口感扎實</p>
+      </div>
+
+  </section>
+
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231306.02479954233!2d121.24568552500003!3d25.062679600000017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a93e632525ed%3A0x15d1c3f2d033f811!2z5ZGz6aaZ6a2a5Li45bqX!5e0!3m2!1szh-TW!2stw!4v1754579466034!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">隱私政策</a></li>
+        <li><a href="#">退換貨政策</a></li>
+        <li><a href="#">運送政策</a></li>
+        <li><a href="#">企業專區</a></li>
+        <li><a href="#">常見問題</a></li>
+      </ul>
+    </div>
+    <div class="footer-payment">
+      <img src="images/visa.png" alt="VISA">
+      <img src="images/mastercard.png" alt="MasterCard">
+      <img src="images/linepay.png" alt="Line Pay">
+    </div>
+    <div class="footer-info">
+      <p>103台北市大同區迪化街一段337號｜TEL: （02）2553-6608｜<a href="mailto:wish@1866.com.tw">wish@1866.com.tw</a></p>
+      <p>健衢生技有限公司 | 統一編號 123456678</p>
+      <p>Powered by Hao</p>
+    </div>
+  </div>
+</footer>
+
+
+  <footer>
+    &copy; 2025 健衢生技有限公司. 保留所有權利。
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+<script>
+  function toggleMenu() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('show');
+  }
+</script>
+
+<script>
+  function toggleMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
+    sideMenu.classList.toggle('show');
+    overlay.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>
