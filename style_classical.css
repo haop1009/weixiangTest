@@ -83,14 +83,14 @@ body {
 
 
 /* 手機版處理 */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* 明確兩欄 */
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr); /* 手機版 2 欄 */
+    gap: 16px;
   }
 
   .product-card {
-    padding: 12px;
+    padding: 14px;
   }
 
   .product-card h3 {
@@ -98,7 +98,7 @@ body {
   }
 
   .product-card p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -185,9 +185,9 @@ footer {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
+  grid-template-columns: repeat(3, 1fr); /* 電腦版固定 3 欄 */
+  gap: 24px;
+  max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
 }
