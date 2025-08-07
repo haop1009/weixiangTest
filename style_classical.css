@@ -83,10 +83,24 @@ body {
 
 
 /* 手機版處理 */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 明確兩欄 */
+    gap: 12px;
   }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+  }
+
+  .product-card p {
+    font-size: 12px;
+  }
+}
 
   .nav-menu {
   display: none; /* ✅ 電腦版也隱藏 */
@@ -108,8 +122,6 @@ body {
   .nav-menu a {
     padding: 8px 0;
   }
-}
-
 
 .fullscreen-swiper {
   width: 100%;
@@ -173,9 +185,9 @@ footer {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -388,5 +400,15 @@ html {
 }
 
 .overlay.show {
+  display: block;
+}
+
+.footer-map iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
   display: block;
 }
