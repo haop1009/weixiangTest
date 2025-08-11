@@ -16,7 +16,7 @@ body {
 /* 主 header */
 .main-header {
   background-color: #fdf6e4;
-  padding: 10px 20px;
+  padding: 8px 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -28,7 +28,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: none;              /* 取消 1200px 的限制，不再被置中縮進 */
+  width: 100%;
+  padding-inline: 0;            /* 確保容器本身不再加額外左右內距 */
   margin: auto;
   position: relative;
 }
@@ -83,41 +85,51 @@ body {
 
 
 /* 手機版處理 */
+/* 手機：2欄 + 圖片比例一致 + 文字兩行 */
 @media (max-width: 767px) {
   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 手機兩欄 */
-    gap: 16px;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px;
     padding: 0 12px;
-  }
-
-  .product-card {
-    background: linear-gradient(to bottom, #fffaf2, #fdf6ec);
-    padding: 16px;
-    border-radius: 16px;
-    border: 1px solid #eee1cc;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    font-size: 14px;
+    margin: 0 auto;
   }
 
   .product-card img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 12px;
     margin-bottom: 8px;
   }
 
   .product-card h3 {
     font-size: 16px;
-    margin: 10px 0 4px;
+    line-height: 1.25;
+    margin: 6px 0 4px;
   }
 
   .product-card p {
     font-size: 13px;
+    line-height: 1.5;
     color: #6b4c38;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* 文字最多兩行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
+
+/* 桌機：讓左右更貼近邊緣 */
+@media (min-width: 992px) {
+  .main-header {               /* ← 注意連字號 */
+    padding: 8px 12px;
+  }
+  .header-container {
+    max-width: none;
+  }
+} /* ← 別漏這個大括號 */
+
 
   .nav-menu {
   display: none; /* ✅ 電腦版也隱藏 */
